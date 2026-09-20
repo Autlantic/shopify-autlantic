@@ -1,0 +1,23 @@
+api_version = "2025-10"
+
+[[extensions]]
+name = "Autlantic USDC"
+handle = "autlantic-offsite"
+type = "payments_extension"
+payment_session_url = "/payment"
+refund_session_url = "/refund"
+merchant_label = "USDC (Autlantic)"
+supported_countries = ["US", "GB", "CA", "AU", "DE", "FR", "NL", "IE", "ES", "IT"]
+supported_payment_methods = ["offsite"]
+supports_3ds = false
+supports_installments = false
+supports_deferred_payments = false
+supports_oversell_protection = false
+test_mode_available = true
+buyer_label = "Pay with USDC"
+buyer_label_translations = [
+  { locale = "en", label = "Pay with USDC" }
+]
+
+[[extensions.targeting]]
+target = "payments.offsite.render"
